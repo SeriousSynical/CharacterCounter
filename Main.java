@@ -5,8 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
         // Initialization
-        boolean isEven;
         boolean flag;
+
+        boolean isEven;
+        boolean isPerfectlyEven;
 
         String message = null;
         String replay = "yes";
@@ -36,6 +38,8 @@ public class Main {
             // Check & Display If Character Count Is Even
             isEven = CharacterCounter.minRepeat(message) == CharacterCounter.maxRepeat(message);
             System.out.println("Even: " + isEven);
+            isPerfectlyEven = CharacterCounter.minStrictRepeat(message) == CharacterCounter.maxStrictRepeat(message);
+            System.out.println("Perfectly Even: " + isPerfectlyEven);
 
             // Prompt Replay
             flag = true;
